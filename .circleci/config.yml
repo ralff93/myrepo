@@ -5,11 +5,13 @@ jobs:
       - image: alpine:3.7
     steps:
       - checkout
-      - run:
+      - run: &test
           name: 1 error
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
+      - run:
+          <<: *test
       - run:
           name: 2 error
           command: |

@@ -10,8 +10,16 @@ jobs:
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
+            ll -f
       - run:
           name: Code Has Arrived
           command: |
             ls -al
+            ll
             echo '^^^That should look familiar^^^'
+          when: on_fail
+      - run:
+          name: cod retray
+          command: |
+            ls -al
+            echo '^^^run if errors^^^'

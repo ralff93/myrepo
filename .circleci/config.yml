@@ -6,13 +6,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: The First Step
+          name: 1 error
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
             ll -f
       - run:
-          name: Code Has Arrived
+          name: 2 error
           command: |
             ls -al
             ll
@@ -20,7 +20,13 @@ jobs:
             echo '^^^run if errors in step Heloo world^^^'
           when: on_fail
       - run:
-          name: cod retray
+          name: 3 not erors
+          command: |
+            ls -al
+            echo '^^^run if errors on Riki^^^'
+          when: on_fail
+      - run:
+          name: 4 not erors
           command: |
             ls -al
             echo '^^^run if errors on Riki^^^'

@@ -16,10 +16,12 @@ jobs:
           command: |
             ls -al
             ll
-            echo '^^^That should look familiar^^^'
+            echo '^^^Riki^^^'
+            echo '^^^run if errors in step Heloo world^^^'
           when: on_fail
       - run:
           name: cod retray
           command: |
             ls -al
-            echo '^^^run if errors^^^'
+            echo '^^^run if errors on Riki^^^'
+          when: on_fail

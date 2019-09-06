@@ -1,10 +1,14 @@
 version: 2
-executors:
-  my-executor:
+jobs:
+  build:
     docker:
       - image: ubuntu:16.04
-jobs:
-  my-job:
-    executor: my-executor
     steps:
-      - run: echo outside the executor
+      - checkout
+      - run:
+          name: FIRST STEP
+          command: |
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
+            cat /etc/os-release
+            id

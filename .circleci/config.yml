@@ -13,3 +13,4 @@ jobs:
             cat /etc/os-release
             id
             ls -la
+            pwd

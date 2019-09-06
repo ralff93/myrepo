@@ -15,9 +15,11 @@ jobs:
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
             cat /etc/os-release
-      - run: id
-      - run: ls -la
-      - run: pwd
+      - run:
+          name: TWO STEP
+          command: |
+            ls -la
+            pwd
 workflows:
   version: 2
   workflow:

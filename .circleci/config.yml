@@ -9,17 +9,20 @@ jobs:
         - master
     steps:
       - checkout
-      - run:
-          name: FIRST STEP
-          command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
-            cat /etc/os-release
-      - run:
-          name: TWO STEP
-          command: |
-            ls -la
-            pwd
+      - attach_workspace:
+          at: ~/my-app
+       - run: pwd
+      # - run:
+      #     name: FIRST STEP
+      #     command: |
+      #       echo 'Hello World!'
+      #       echo 'This is the delivery pipeline'
+      #       cat /etc/os-release
+      # - run:
+      #     name: TWO STEP
+      #     command: |
+      #       ls -la
+      #       pwd
 workflows:
   version: 2
   workflow:

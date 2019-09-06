@@ -1,33 +1,11 @@
-version: 2
-jobs:
-  build:
+version: 2.1
+executors:
+  my-executor:
     docker:
-      - image: ubuntu:16.04
+      - image: circleci/ruby:2.5.1-node-browsers
+
+jobs:
+  my-job:
+    executor: my-executor
     steps:
-      - checkout
-      - run:
-          name: FIRST STEP
-          command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
-      # - run:
-      #     <<: *test
-      # - run:
-      #     name: 2 error
-      #     command: |
-      #       ls -al
-      #       echo '^^^Riki^^^'
-      #       echo '^^^run if errors in step Heloo world^^^'
-      #     when: on_fail
-      # - run:
-      #     name: 3 not erors
-      #     command: |
-      #       ls -al
-      #       echo '^^^run if errors on Riki^^^'
-      #     when: on_fail
-      # - run:
-      #     name: 4 not erors
-      #     command: |
-      #       ls -al
-      #       echo '^^^run if errors on Riki^^^'
-      #     when: on_fail
+      - run: echo outside the executor

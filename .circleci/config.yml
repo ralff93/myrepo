@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  build-my:
     docker:
       - image: ubuntu:16.04
     working_directory: ~/my-app

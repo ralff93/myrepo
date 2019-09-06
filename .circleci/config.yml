@@ -8,13 +8,13 @@ jobs:
       - checkout
       - run:
           name: FIRST STEP
-          command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
-            cat /etc/os-release
-            id
-            ls -la
-            pwd
+          command:
+            - echo 'Hello World!'
+            - echo 'This is the delivery pipeline'
+            - cat /etc/os-release
+            - id
+            - ls -la
+            - pwd
 workflows:
   version: 2
   workflow:

@@ -1,9 +1,8 @@
-version: 2.1
+version: 2
 executors:
   my-executor:
     docker:
-      - image: circleci/ruby:2.5.1-node-browsers
-
+      - image: ubuntu:16.04
 jobs:
   my-job:
     executor: my-executor

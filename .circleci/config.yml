@@ -11,7 +11,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/my-app
-       - run: pwd
+      - run: pwd
       # - run:
       #     name: FIRST STEP
       #     command: |
